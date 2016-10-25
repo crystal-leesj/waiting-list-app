@@ -1,0 +1,68 @@
+<h4>WAITING LIST APP</h4>
+<h4>Registraion</h4>
+<form class="form-horizontal" name="registerForm" ng-model = "register" ng-submit="adminRegister()">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="business_name">Name of Business:</label>
+    <div class="col-sm-10">
+      <input type="text" name="business_name" ng-model='register.business_name' class="form-control" placeholder="Enter business name" ng-minlength='3' required>
+      <div ng-messages="registerForm.business_name.$error" ng-show="registerForm.business_name.$touched">
+        <p ng-message="minlength">The business name is too short.</p>
+        <p ng-message="required">The business name is required.</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="url_name">Unique URL Name:</label>
+    <div class="col-sm-10">
+      <input type="text" name="url_name" ng-model='register.url_name' class="form-control" placeholder="Enter url name" ng-minlength='3' required>
+      
+      <div ng-messages="registerForm.url_name.$error" ng-show="registerForm.url_name.$touched">
+        <p ng-message="minlength">The url name is too short.</p>
+        <p ng-message="required">The url  name is required.</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="phone">Phone Number:</label>
+    <div class="col-sm-10">
+      <input type="number" name="phone" ng-model='register.phone' class="form-control" placeholder="Enter phone number" required>
+      <div ng-messages="registerForm.phone.$error" ng-show="registerForm.phone.$touched">
+        <p ng-message="required">The phone number is required.</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10">
+      <input type="email" name="email" ng-model='register.email' class="form-control" placeholder="Enter email" required>
+      {{message}}
+      <div ng-messages="registerForm.email.$error" ng-show="registerForm.email.$touched">
+        <p ng-message="required">The phone number is required.</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="password">Password:</label>
+    <div class="col-sm-10">
+      <input type="password" name="password" ng-model='register.password' class="form-control" placeholder="Enter password" ng-minlength='3' required>
+      <div ng-messages="registerForm.password.$error" ng-show="registerForm.password.$touched">
+        <p ng-message="minlength">The password is too short.</p>
+        <p ng-message="required">The password is required.</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="password">Confirm Password:</label>
+    <div class="col-sm-10">
+      <input type="password" name="confirm_password" ng-model='register.confirm_password' class="form-control" placeholder="confirm password" required>
+      <div ng-messages="registerForm.confirm_password.$error" ng-show="registerForm.confirm_password.$touched">
+        <p ng-message="required">The confirmed password is required.</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary btn-block">REGISTER</button>
+    </div>
+  </div>
+</form>

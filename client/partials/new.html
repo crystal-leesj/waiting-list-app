@@ -1,0 +1,22 @@
+<div>
+  <button type="button" class="btn btn-warning pull-right" ng-click='logout()'>Logout</button>
+  <h5>{{username}} is logged in</h5>
+</div>
+<h2>Add to Waiting List</h2>
+<form>
+  <div class="waitlistFrom">
+    <label for='name'>Name: </label>
+    <input type="text" class="form-control" ng-model="new_waitlist.name">
+  </div>
+  <div class="waitlistFrom">
+    <label for='party_size'>Party size: </label>
+    <input type="number" class="form-control" ng-model="new_waitlist.party_size">
+  </div>
+  <div class="waitlistFrom">
+    <label for='phone'>Phone Number: </label>
+    <input type="number" class="form-control" ng-model="new_waitlist.phone">
+  </div>
+  <br>
+  <input class="btn btn-warning" type="button" value="Cancel" ng-click="goBack()">
+  <input class="btn btn-primary" type="submit" value="Add" ng-click="add_to_list()">
+</form>

@@ -1,0 +1,37 @@
+<br>
+<div class="jumbotron">
+  <h2>{{err_message}}</h2>
+  <h3>Welcome to {{business_name}}'s Waiting List!</h3>
+  <h5>
+    <span class="glyphicon glyphicon-earphone"></span> {{business_phone}}
+  </h5>
+</div>
+<div>
+  <table class="table table-striped">
+    <tr>
+      <th>#</th>
+      <th><span class="glyphicon glyphicon-user"></span> Name</th>
+      <th><span class="glyphicon glyphicon-tag"></span> Party Size</th>
+    </tr>
+    <tr ng-repeat="waitlist in waitlists track by $index">
+      <td>{{$index+1}}</td>
+      <td>{{waitlist.name}}</td>
+      <td>{{waitlist.party_size}}</td>
+    </tr>
+  </table>
+</div>
+
+
+<style>
+.jumbotron {
+  /* add bootstrap jumbotron background image */
+  background: url("images/Homemade-coconut-coffee-body-scrub-5.jpg");
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  /* change bootstrap jumbotron text color */
+  color: white;
+  text-shadow: 2px 2px 8px #669900;
+}
+</style>
